@@ -188,6 +188,7 @@ def init_embeddings(provider, model):
         from langchain_openai import OpenAIEmbeddings
 
         return OpenAIEmbeddings(
+            check_embedding_ctx_length=False,
             model=model,
             api_key=RAG_OPENAI_API_KEY,
             openai_api_base=RAG_OPENAI_BASEURL,
